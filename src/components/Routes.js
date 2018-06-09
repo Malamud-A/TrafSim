@@ -4,16 +4,12 @@ import Point from './Point';
 export default class Routes extends React.Component {
   constructor() {
     super();
-    this.clickedPoints = [];
 
     this.clickPoint = this.clickPoint.bind(this);
   }
   
   clickPoint(x, y) {
-    if (!getClickedPoint(this.clickedPoints, x, y)) {
-      this.clickedPoints.push({ x, y });
-    }
-    this.forceUpdate();
+    this.props.clickPoint(x, y);
   }
 
 
@@ -34,13 +30,14 @@ export default class Routes extends React.Component {
         {points.map((el, index) => {
           const x = el[0];
           const y = el[1];
-          const isSelected = getClickedPoint(this.clickedPoints, x / 100, 9 - (y / 100));
+          const isSelected = getClickedPoint(this.props.clickedPoints, x / 100, 10 - (y / 100));
           return <Point selected={isSelected} clickPoint={this.clickPoint} key={index} x={x} y={y}/>
         })}
       </div>
     )
   }
 }
+
 
 function getClickedPoint(list, x, y) {
   if (list.map((el) => `${el.x},${el.y}`).includes(`${x},${y}`)) {
