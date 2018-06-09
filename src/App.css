@@ -1,5 +1,6 @@
 #root > div{
   display: flex;
+  justify-content: space-between;
 }
 
 .container{
@@ -57,14 +58,21 @@
   background-color: green;
 }
 
-.form {
+.selector-form {
   background-color: #4f4e4e;
   display: flex;
   flex-direction: column;
+  padding: 40px 100px;
 }
 
-.form > input {
-  margin: 10px;
+.selector-form > select {
+  margin-bottom: 20px;
+  width: 350px;
+  height: 45px;
+  padding-left: 15px;
+  border: none;
+  background: #878684;
+  color: #fff;
 }
 
 .form > button {

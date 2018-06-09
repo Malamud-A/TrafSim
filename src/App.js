@@ -62,15 +62,16 @@ class App extends Component {
                 <Routes isAdding={this.state.selectedTransport} ref={(c) => {
                 this.blocks = c;
                 }}/>
-                <div className="selector-form">
-                    <select name="transport" id="transport" onChange={this.selectTransport} >
-                        <option value="bus">Bus</option>
-                        <option value="trolley">Trolley</option>
-                        <option value="minibus">Minibus</option>
-                    </select>
-                    <input type="text" onChange={this.selectPopulation} />
-                    <button onClick={this.send}>Send</button>
-                </div>
+
+            </div>
+            <div className="selector-form">
+                <select name="transport" id="transport" onChange={this.selectTransport} >
+                    <option value="bus">Bus</option>
+                    <option value="trolley">Trolley</option>
+                    <option value="minibus">Minibus</option>
+                </select>
+                <input type="text" onChange={this.selectPopulation} />
+                <button onClick={this.send}>Send</button>
             </div>
         </div>;
     }
