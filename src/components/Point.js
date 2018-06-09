@@ -12,7 +12,7 @@ export default class Point extends React.Component {
 
 
   togglePoint(){
-    this.props.clickPoint(this.props.x / 100, 9 - (this.props.y / 100));
+    this.props.clickPoint(this.props.x / 100, 10 - (this.props.y / 100));
   }
 
   render() {
