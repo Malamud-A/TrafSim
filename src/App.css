@@ -46,7 +46,7 @@
 }
 
 .points-container {
-  display: none;
+  /*display: none;*/
 }
 
 .points-container > .red {

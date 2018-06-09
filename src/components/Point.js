@@ -4,7 +4,6 @@ export default class Point extends React.Component {
   constructor() {
     super();
     this.state = {
-      selected: false,
       clickable: true
     };
     this.togglePoint = this.togglePoint.bind(this)
@@ -13,9 +12,7 @@ export default class Point extends React.Component {
 
 
   togglePoint(){
-    this.setState( prevState => ({
-      selected: !prevState.selected
-    }))
+    this.props.clickPoint(this.props.x / 100, 9 - (this.props.y / 100));
   }
 
   render() {
@@ -35,7 +32,7 @@ export default class Point extends React.Component {
       // height: 5px;
       // width:5px;
       // border-radius: 50%`}
-        className={this.state.selected ?
+        className={this.props.selected ?
           (this.state.clickable ? 'green clickable' : 'green')
           : this.state.clickable ? 'red clickable' : 'red'}
       onClick={this.togglePoint}>
