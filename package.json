@@ -1,6 +1,7 @@
 {
   "name": "traf_sim",
   "version": "0.1.0",
+  "proxy": "http://localhost:8090",
   "private": true,
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -9,6 +10,7 @@
     "react-dom": "^16.4.0",
     "react-scripts": "1.1.4",
     "react-svg-pathline": "^0.5.0",
+    "request": "^2.87.0",
     "sass-loader": "^7.0.3"
   },
   "scripts": {
