@@ -24,10 +24,9 @@ export default class Point extends React.Component {
         style={{position: 'absolute',
           top: this.props.y,
           left:this.props.x,
-          height: 10,
-          width:10,
+          height: 15,
+          width:15,
           borderRadius: '50%',
-          backgroundColor: '#000',
         }}
       //   style={`
       // position: absolute;

@@ -19,7 +19,8 @@ export default class Routes extends React.Component {
         height: 1000,
         width: 1000,
         backgroundColor: 'transparent'
-      }}>
+      }}
+      className='points-container'>
         {points.map((el, index) => {
           return <Point key={index} x={el[0]} y={el[1]}/>
         })}

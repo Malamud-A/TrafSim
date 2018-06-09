@@ -1,21 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Routes from './components/Routes';
+import Form from './components/Form';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        let blocks = [];
+
+        for (let i = 0; i < 100; i++) {
+            let idName = 'kvartal_' + i;
+            blocks.push(<div className='kvartals' id={idName} key={i}></div>);
+        }
+
+        return <div>
+            <div  ref="elem" className="container">
+                {blocks}
+                <Routes/>
+
+            </div>
+            <Form/>
+        </div>;
+    }
 }
 
 export default App;

@@ -26,3 +26,76 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.container{
+  width: 1000px;
+  height: 1000px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.kvartals{
+  width: 100px;
+  height: 100px;
+  background: rgba(0, 255, 0, 0.5);
+  border-right: 5px solid rgba(0, 0, 0, 1);
+  border-bottom: 5px solid rgba(0, 0, 0, 1);
+  box-sizing: border-box;
+  float: left;
+  opacity: 0.3;
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box;
+}
+
+.kvartals:nth-child(10n + 1){
+  border-left: 5px solid rgba(0,0,0, 1);
+}
+
+.kvartals:nth-child(-n + 10){
+  border-top: 5px solid rgba(0,0,0, 1);
+}
+
+#kvartal_1{
+  background: rgba(45, 54, 45, 0.5);
+  border-right: 5px solid rgba(43, 54, 454, 1);
+}
+
+#kvartal_2{
+  background: rgba(45, 54, 45, 0.5);
+  border-right: 5px solid rgba(43, 54, 123, 1);
+}
+
+#kvartal_12{
+  background: rgba(45, 54, 45, 0.5);
+  border-right: 5px solid rgba(43, 54, 454, 1);
+}
+
+.points-container {
+  display: none;
+}
+
+.points-container > .red {
+  background-color: red;
+}
+
+.points-container > .green {
+  background-color: green;
+}
+
+.form {
+  border: 1px solid #000;
+  border-radius: 10px;
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.form > input {
+  margin: 10px;
+}
+
+.form > button {
+  margin: 10px;
+}
