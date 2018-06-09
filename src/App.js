@@ -55,6 +55,11 @@ class App extends Component {
                 population: 1000,
                 routes: this.state.routes,
             },
+
+        }, (_, _2, body) => {
+            this.setState({
+                response: body
+            });
         });
     }
 
@@ -72,17 +77,18 @@ class App extends Component {
                 <Routes clickPoint={this.clickPoint} clickedPoints={this.state.clickedPoints} isAdding={this.state.selectedTransport} ref={(c) => {
                 this.blocks = c;
                 }}/>
-                <div className="selector-form">
-                    <select name="transport" id="transport" onChange={this.selectTransport} >
-                        <option value="--">--</option>
-                        <option value="bus">Bus</option>
-                        <option value="trolley">Trolley</option>
-                        <option value="minibus">Minibus</option>
-                    </select>
-                    <button onClick={this.addRoute}>Add route</button>
-                    <input type="text" onChange={this.selectPopulation} />
-                    <button onClick={this.send}>Send</button>
-                </div>
+
+            </div>
+            <div className="selector-form">
+                <select name="transport" id="transport" onChange={this.selectTransport} >
+                    <option value="--">--</option>
+                    <option value="bus">Bus</option>
+                    <option value="trolley">Trolley</option>
+                    <option value="minibus">Minibus</option>
+                </select>
+                <button onClick={this.addRoute}>Add route</button>
+                <input type="text" onChange={this.selectPopulation} />
+                <button onClick={this.send}>Send</button>
             </div>
         </div>;
     }
